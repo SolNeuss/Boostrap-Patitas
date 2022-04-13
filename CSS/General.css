@@ -237,6 +237,9 @@ main {
     "imag4 imag5 imag5"
     "imag4 imag6 imag7";
 }
+.item-media{
+  overflow-x: visible;
+}
 .item-media img {
   width: 100%;
   height: 150%;
