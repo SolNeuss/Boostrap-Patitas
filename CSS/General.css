@@ -60,43 +60,10 @@ main {
 }
 
 /* INICIO */
-#intro img {
-  grid-area: imagen;
-  display: block;
-  margin: auto;
-}
 #intro p {
   padding-left: 50px;
-  grid-area: intro;
-}
-#intro {
-  display: grid;
-  grid-area: intro;
-  grid-template-columns: 45% 50%;
-  grid-template-rows: 20px 1fr;
-  grid-column-gap: 10px;
-  grid-template-areas:
-    "nav nav"
-    "titulo titulo"
-    "intro imagen"
-    "footer footer";
 }
 /* INTEGRANTES */
-#grids-container {
-  margin: 0%;
-  display: grid;
-  grid-template-columns: repeat(2, 45%);
-  grid-gap: 5%;
-  grid-template-rows: 6% 40% 45%;
-  margin: auto;
-  justify-content: center;
-  grid-template-areas:
-    "titulo titulo"
-    "texto1 img1"
-    "img2 texto2";
-
-}
-
 .grids-item-uno p,
 .grids-item-uno h2,
 .grids-item-cuatro ol li,
@@ -107,57 +74,36 @@ main {
 .grids-item-cuatro {
   background-color: rgba(0, 255, 255, 0.267);
   border-radius: 5%;
-  padding: 3%;
-  overflow: visible;
+  padding: 2%;
   transition: all 1s;
-}
-.grids-item-uno {
-  grid-area: texto1;
+  margin: 50px;
 }
 .grids-item-cuatro {
   padding-left: 35px;
-  margin-top: 30px;
-  grid-area: texto2;
 }
 .grids-item-dos,
 .grids-item-tres {
-  margin: auto;
+  margin: 50px;
   background-color: rgba(8, 71, 71, 0.938);
   border-radius: 5%;
-  padding: 2%;
-  overflow: visible;
+  padding: 1%;
   transition: all 1s;
 }
 .grids-item-dos img {
   height: 100%;
   width: 100%;
   border-radius: 3%;
-  grid-area: img1;
 }
 .grids-item-tres img {
   height: 100%;
   width: 100%;
   border-radius: 3%;
-  grid-area: img2;
 }
 .grids-item-uno:hover, .grids-item-dos:hover, .grids-item-tres:hover, .grids-item-cuatro:hover{
   transform: scale(0.9);
 }
 /* ADOPCIONES */
-#animal-tag {
-  display: grid;
-  grid-template-columns: repeat(3, 33%);
-  grid-template-rows: 3% auto;
-  grid-template-areas:
-    "titulo titulo titulo"
-    "prof1 prof2 prof3";
-  justify-content: space-evenly;
-  justify-items: center;
-  margin: auto;
-}
-
 .animal {
-  width: 70%;
   background-color: rgba(255, 255, 255, 0.274);
   box-shadow: 0 10px 90px #00000024;
   text-align: center;
@@ -167,6 +113,7 @@ main {
   padding-top: 30px;
   padding-bottom: 30px;
   transition: all 1s;
+  margin: 30px;
 }
 .animal:hover{
   transform: scale(1.1);
@@ -223,69 +170,21 @@ main {
 
 /* EVENTOS */
 #contenedor-media {
-  width: 100%;
-  height: 150%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 200px);
-  grid-row-gap: 110px;
-  grid-column-gap: 10px;
-  margin: auto;
-  grid-template-areas:
-    "imag1 imag2 imag3"
-    "imag4 imag5 imag5"
-    "imag4 imag6 imag7";
+  width: 70%;
+
 }
-.item-media img {
-  width: 100%;
-  height: 150%;
-  object-fit: cover;
+.item-media{
+  overflow: visible;
 }
-.imag7 {
-  grid-area: imag7;
-}
-.imag6 {
-  grid-area: imag6;
-}
-.imag5 {
-  grid-area: imag5;
-}
-.imag4 {
-  height: 79.7%;
-  grid-area: imag4;
-}
-.imag3 {
-  grid-area: imag3;
-}
-.imag2 {
-  grid-area: imag2;
-}
-.imag1 {
-  grid-area: imag1;
-}
+
+
 
 /* CONTACTO */
-.forms-cont {
-  display: grid;
-  grid-template-rows: repeat(5, auto);
-  grid-template-columns: 40% 50%;
-  grid-column-gap: 40px;
-  grid-template-areas:
-    "titulo titulo"
-    "forms ."
-    "forms contacto"
-    "forms ."
-    "forms .";
-}
-.forms {
-  grid-area: forms;
-}
-
 input[type="text"],
 [type="email"],
 select,
 textarea {
-  width: 120%;
+  width: 70%;
   display: block;
   padding: 12px;
   border: 1px solid rgb(0, 0, 0);
@@ -321,13 +220,11 @@ textarea {
 
 #contactos img {
   height: 100%;
-  margin-left: 300px;
   display: inline-block;
   vertical-align: middle;
 }
 #contactos p {
   display: inline-block;
-  margin-left: 10px;
   padding-bottom: 50px;
 }
 #contactos {
@@ -344,7 +241,6 @@ textarea {
 @media screen and (min-width: 700px) and (max-width: 1200px) {
   /* INICIO */
   #intro img {
-    grid-area: imagen;
     display: block;
     width: 95%;
     max-width: 650px;
@@ -354,47 +250,16 @@ textarea {
   #intro p {
     padding-left: 50px;
     padding-right: 50px;
-    grid-area: intro;
-  }
-  #intro {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 35px 5px 1fr 300px 30px;
-    grid-template-areas:
-      "nav"
-      "titulo"
-      "intro"
-      "imagen"
-      "footer";
   }
 
-  #grids-container {
-    margin: 0%;
-    display: grid;
-    grid-template-columns: repeat(2, 45%);
-    grid-gap: 2%;
-    grid-template-rows: 6% 47% 47%;
-    margin: auto;
-    justify-content: center;
-    grid-template-areas:
-      "titulo titulo"
-      "texto1 img1"
-      "img2 texto2";
-  }
   /* INTEGRANTES */
   .grids-item-cuatro{
     padding-bottom: 10%;
   }
   
   /* ADOPCIONES */
-  #animal-tag {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: 3% 50% 50%;
-    grid-template-areas:
-      "titulo titulo"
-      "prof1 prof2"
-      "prof3 prof3";
+  .prof1, .prof2{
+    width: 40%;
   }
   .prof3 {
     width: 40%;
@@ -406,23 +271,7 @@ textarea {
     padding-bottom: 40px;
   }
   /* EVENTOS */
-  #contenedor-media {
-    width: 100%;
-    height: 150%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 50% 49%;
-    grid-template-rows: repeat(5, 200px);
-    grid-row-gap: 110px;
-    grid-column-gap: 10px;
 
-    grid-template-areas:
-      "imag1 imag2"
-      "imag5 imag5"
-      "imag5 imag5"
-      "imag6 imag4"
-      "imag3 imag4";
-  }
   .imag7 {
     display: none;
   }
@@ -430,47 +279,13 @@ textarea {
     height: 79.7%;
   }
   /* CONTACTO */
-  .forms-cont {
-    display: grid;
-    grid-template-rows: repeat(5, auto);
-    grid-template-columns: 40% 50%;
-    grid-template-areas:
-      "titulo titulo"
-      "forms ."
-      "forms contacto"
-      "forms ."
-      "forms .";
-  }
   #contactos img {
     margin-left: 150px;
   }
 }
 @media screen and (min-width: 0px) and (max-width: 900px) {
-  /* INTEGRANTES */
-  #grids-container {
-    margin: 0%;
-    display: grid;
-    grid-template-columns: repeat(2, 45%);
-    grid-gap: 5%;
-    grid-template-rows: 6% 40% 47%;
-    margin: auto;
-    justify-content: center;
-    grid-template-areas:
-      "titulo titulo"
-      "texto1 img1"
-      "img2 texto2";
-  
-  }
   /* CONTACTO */
-  .forms-cont {
-    display: grid;
-    grid-template-rows: repeat(3, auto);
-    grid-template-columns: 50%;
-    grid-template-areas:
-      "titulo"
-      "forms"
-      "contacto";
-  }
+
   #ubicacion,
   #telefono,
   #mail {
@@ -526,7 +341,6 @@ textarea {
   }
   /* INICIO */
   #intro img {
-    grid-area: imagen;
     display: block;
     width: 90%;
     max-width: 650px;
@@ -536,50 +350,15 @@ textarea {
   #intro p {
     padding-left: 50px;
     padding-right: 50px;
-    grid-area: intro;
-  }
-  #intro {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 35px 5px 1fr 300px 30px;
-    grid-template-areas:
-      "nav"
-      "titulo"
-      "intro"
-      "imagen"
-      "footer";
   }
 
   /* INTEGRANTES */
-  #grids-container {
-    margin: 0%;
-    display: grid;
-    grid-template-columns: 95%;
-    grid-gap: 3%;
-    grid-template-rows: 2% 25% auto 30% auto;
-    margin: auto;
-    justify-content: center;
-    grid-template-areas:
-      "titulo"
-      "texto1"
-      "img1"
-      "texto2"
-      "img2";
-  }
   .grids-item-cuatro{
     padding-bottom: 30px;
   }
   /* ADOPCIONES */
-  #animal-tag {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-row-gap: 20px;
-    grid-template-rows: 1% 35% 35% 35%;
-    grid-template-areas:
-      "titulo"
-      "prof1"
-      "prof2"
-      "prof3";
+  .animal{
+    max-width: 70%;
   }
   .animal button {
     padding: 20px 30px;
@@ -589,37 +368,9 @@ textarea {
   h3 {
     padding-bottom: 20px;
   }
-  /* EVENTOS */
-  #contenedor-media {
-    width: 100%;
-    height: 150%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(8, 200px);
-    grid-row-gap: 110px;
-    grid-column-gap: 10px;
 
-    grid-template-areas:
-      "imag1"
-      "imag2"
-      "imag3"
-      "imag4"
-      "imag4"
-      "imag5"
-      "imag6"
-      "imag7";
-  }
   /* CONTACTO */
-  .forms-cont {
-    display: grid;
-    grid-template-rows: repeat(3, auto);
-    grid-template-columns: 70%;
-    grid-template-areas:
-      "titulo"
-      "forms"
-      "contacto";
-  }
+
   #submit,
   #reset {
     background-color: #f18e55;
@@ -636,19 +387,7 @@ textarea {
   .desplegable {
     width: 80%;
   }
-  #grids-container {
-    margin: 0%;
-    display: grid;
-    grid-template-columns: 95%;
-    grid-gap: 3%;
-    grid-template-rows: 2% 1fr 1fr;
-    margin: auto;
-    justify-content: center;
-    grid-template-areas:
-      "titulo"
-      "texto1"
-      "texto2";
-  }
+
   .grids-item-uno {
     margin-top: 40px;
   }
