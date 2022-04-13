@@ -170,8 +170,50 @@ main {
 
 /* EVENTOS */
 #contenedor-media {
+<<<<<<< HEAD
   width: 70%;
 
+=======
+  width: 100%;
+  height: 150%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  grid-row-gap: 110px;
+  grid-column-gap: 10px;
+  margin: auto;
+  grid-template-areas:
+    "imag1 imag2 imag3"
+    "imag4 imag5 imag5"
+    "imag4 imag6 imag7";
+}
+.item-media{
+  overflow-x: visible;
+}
+.item-media img {
+  width: 100%;
+  height: 150%;
+  object-fit: cover;
+}
+.imag7 {
+  grid-area: imag7;
+}
+.imag6 {
+  grid-area: imag6;
+}
+.imag5 {
+  grid-area: imag5;
+}
+.imag4 {
+  height: 79.7%;
+  grid-area: imag4;
+}
+.imag3 {
+  grid-area: imag3;
+}
+.imag2 {
+  grid-area: imag2;
+>>>>>>> 0e64b4a1738f4c4de40663f2b820e95602c8bfca
 }
 .item-media{
   overflow: visible;
